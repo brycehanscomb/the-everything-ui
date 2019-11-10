@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+    ;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px #E5E5E5 solid;
+}
+
+aside {
+    grid-area: sidebar;
+    font-size: 14px;
+}
+
+main {
+    grid-area: main;
+    background: rgb(249, 249, 249);
+    padding: 20px 80px;
+}
+
+#menu-button {
+     margin-right: 15px;
+     margin-left: 15px;
+}
+
+.menu-link {
+    padding: 5px 20px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-link:nth-child(2) {
+    background: #E5E5E5;
+    font-weight: bold;
+}
+
+#search-box {
+    height: 33px;
+    -moz-appearance: none;
+    font: inherit;
+    border: 1px solid #cdcdcd;
+    padding: 5px 8px;
+    margin-left: 200px;
+    width: 400px;
+    background-image: url('common/search-button.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 35px;
+}
+
+#menu-right {
+    justify-self: flex-end;
+    margin: 0 15px 0 auto;
+}
+
+#logo {
+    position: absolute;
+    top: 17px;
+    left: 70px;
+    height: 25px;
+    width: auto;
+}
+
+.menu-separator {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #E5E5E5;
+    margin: 10px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+.card .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    letter-spacing: 0.2px;
+}
+
+.card .thumbnail {
+    width: 250px;
+    height: 138px;
+    background-size: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.card .cite {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .blurb {
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.card-section-title {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card .blurb-link {
+    font-weight: bold;
+    color: #666;
+    display: inline-block;
+    margin-right: 10px;
+}
